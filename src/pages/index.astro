@@ -11,6 +11,8 @@ import facebook from "../assets/svgs/facebook.svg";
 import instagram from "../assets/svgs/instagram.svg"; 
 import email from "../assets/svgs/email.svg"; 
 import web from "../assets/svgs/web.svg"; 
+
+import mangas from "../data/mangas"
 ---
 
 <Layout title="Anbu Manga | Venta de Mangas en el Perú">
@@ -40,10 +42,28 @@ import web from "../assets/svgs/web.svg";
       </div>
     </section>
 
+    <section id="mangas" class="py-12 md:py-20">
+      <div class="text-center text-am-red pb-8 w-10/12 mx-auto">
+        <h2>Los mangas más comprados</h2>
+        <p class="max-w-80 mx-auto text-lg">Conoce el ranking de los 3 mangas más vendidos por nuestra tienda</p>
+      </div>
+      <ul class="grid grid-cols-1 lg:grid-cols-3 place-items-center md:w-10/12 lg:w-8/12 mx-auto">
+      {mangas.map((manga) => (
+        <li>
+          <div class="border-am-red border-2 rounded-xl w-52 p-4 text-center text-am-red my-4 lg:my-0">
+            <Image class="h-52 pr-2 mx-auto mb-6" src={manga.src} alt={manga.alt} />
+            <p class="font-extrabold mb-1">{manga.title}</p>
+            <p class="text-sm mb-2">{manga.body}</p>
+            <div class="bg-am-red text-white rounded-lg py-2 w-10/12 mx-auto text-center">{manga.price}</div>
+          </div>
+        </li>
+      ))}
+      </ul>
+    </section>
+
     <section id="clients" class="py-12 md:py-20">
       <h2 class="text-center text-am-red pb-8">Lo que Dicen Nuestros Clientes</h2>
       <ClientReviews />
-
     </section>
 
     <section id="contact">
