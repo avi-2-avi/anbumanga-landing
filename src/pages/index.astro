@@ -1,6 +1,7 @@
 ---
 import Button from '../components/Button.astro';
 import Input from '../components/Input.astro';
+import ClientReviews from '../components/ClientReviews.astro';
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 
@@ -38,6 +39,12 @@ import web from "../assets/svgs/web.svg";
         </div>
       </div>
     </section>
+
+    <section id="clients py-12 md:py-20 lg:py-40">
+      <ClientReviews />
+
+    </section>
+
     <section id="contact">
       <div class="bg-am-red">
         <div class="bg-white w-full md:w-1/2 text-am-red mx-auto py-14 text-center px-4 md:px-10 lg:px-20">
