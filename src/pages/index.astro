@@ -15,6 +15,7 @@ import email from "../assets/svgs/email.svg";
 import web from "../assets/svgs/web.svg"; 
 import rotate3d from "../assets/svgs/rotate-3d.svg"; 
 import relation from "../assets/images/relation.png"
+import discover from "../assets/images/discover.png"
 import about from "../assets/images/about.png"
 
 import mangas from "../data/mangas"
@@ -48,7 +49,20 @@ import mangas from "../data/mangas"
     </section>
 
     <section id="about" class="mt-10">
-      <div class="grid grid-cols-1 xl:grid-cols-3 w-10/12 md:w-8/12 mx-auto mb-10 gap-y-8">
+      <div class="grid grid-cols-1 xl:grid-cols-5 md:w-8/12 mx-4 md:mx-auto my-20">
+        <div class="xl:col-start-1 xl:col-end-4 mb-6 xl:mb-0">
+          <Image class="h-80 w-auto md:w-8/12 md:h-auto mx-auto" src={discover} alt="Imagen de hokage." />
+        </div>
+        <div class="xl:col-start-4 xl:col-end-6 place-self-center flex flex-col justify-center items-center">
+          <div class="bg-am-red max-w-[440px] text-white rounded-l-2xl shadow-md shadow-black/40 px-8 py-12 text-center mx-2 mb-6">
+            <p class="text-xl mb-4">Descubre y compra mangas de importación directa</p>
+            <p>Explora nuestra selección exclusiva de manga importado directamente desde Japón. Encuentra los últimos lanzamientos y tus títulos favoritos con la calidad y autenticidad que mereces</p>
+          </div>
+          <Button text="Comprar ahora"/>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 xl:grid-cols-3 w-10/12 md:w-8/12 mx-auto mb-10 gap-y-8 mt-12">
         <h2 class="flex xl:hidden text-am-red text-center mx-auto">¿Por qué Anbu Manga?</h2>
         <div>
           <Card title="Recomendaciones Personalizadas">
@@ -112,7 +126,7 @@ import mangas from "../data/mangas"
       </div>
     </section>
 
-    <section id="clients" class="py-12 md:py-20">
+    <section id="clients" class="py-12 md:pb-40">
       <h2 class="text-center text-am-red pb-8">Lo que Dicen Nuestros Clientes</h2>
       <ClientReviews />
     </section>
