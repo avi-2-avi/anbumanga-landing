@@ -28,6 +28,7 @@ export default {
       "am-red": "#9A1C1F",
       white: "#FFFFFF",
       black: "#000000",
+      "am-gray-light": "#D9D9D9",
     },
   },
   plugins: [],

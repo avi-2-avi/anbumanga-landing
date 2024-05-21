@@ -60,7 +60,9 @@ const FoldableElement: React.FC<FoldableElementProps> = ({
         )}
       </button>
       {isOpen && (
-        <div className="p-4 mt-2 border rounded shadow-sm w-48">{content}</div>
+        <div className="p-4 mt-2 rounded-xl shadow-sm w-52 text-center bg-am-gray-light">
+          {content}
+        </div>
       )}
     </div>
   );

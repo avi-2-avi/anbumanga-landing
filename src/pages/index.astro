@@ -46,6 +46,13 @@ import mangas from "../data/mangas"
     </section>
 
     <section id="about">
+      <div class="grid grid-cols-3">
+        <div></div>
+        <div>
+          <h2 class="text-am-red">¿Por qué AnbuManga?</h2>
+        </div>
+        <div></div>
+      </div>
       <Image class="mx-auto w-9/12 lg:w-1/2 h-auto pr-2" src={about} alt="Imagen de seccion hacerca de Anbu Manga." />
     </section>
 
@@ -53,11 +60,11 @@ import mangas from "../data/mangas"
       <h2 class="text-center text-am-red mb-8 mx-4">Nuestra relación con el Cliente</h2>
       <div class="grid grid-cols-1 gap-y-8 xl:grid-cols-7 text-am-red place-items-center xl:w-3/5 mx-4 xl:mx-auto">
         <Image class="hidden xl:flex h-80 w-auto pr-2 xl:col-start-1 xl:col-end-4" src={relation} alt="Imagen de seccion de relacion." />
-        <div class="place-self-center mx-auto xl:mb-20 xl:col-start-4 xl:col-end-6">
-          <FoldableElement client:only="react" title="Atención Personalizada" content="more content"  />
+        <div class="place-self-center mx-auto xl:mb-16 xl:col-start-4 xl:col-end-6">
+          <FoldableElement client:only="react" title="Atención Personalizada" content="Cada cliente recibe un servicio adaptado a sus necesidades específicas."  />
         </div>
-        <div class="place-self-center mx-auto xl:mt-20 xl:col-start-6 xl:col-end-8">
-          <FoldableElement client:only="react" title="Seguimiento Post-venta" content="more content"  />
+        <div class="place-self-center mx-auto xl:mt-16 xl:col-start-6 xl:col-end-8">
+          <FoldableElement client:only="react" title="Seguimiento Post-venta" content="Aseguramos tu satisfacción y escuchamos tus sugerencias."  />
         </div>
         <Image class="flex xl:hidden max-h-80 w-auto" src={relation} alt="Imagen de seccion de relacion." />
       </div>
