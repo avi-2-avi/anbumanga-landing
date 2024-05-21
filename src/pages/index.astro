@@ -2,6 +2,7 @@
 import Button from '../components/Button.astro';
 import Input from '../components/Input.astro';
 import ClientReviews from '../components/ClientReviews.astro';
+import Card from '../components/Card.astro';
 import FoldableElement from '../components/FoldableElement.tsx';
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
@@ -12,6 +13,7 @@ import facebook from "../assets/svgs/facebook.svg";
 import instagram from "../assets/svgs/instagram.svg"; 
 import email from "../assets/svgs/email.svg"; 
 import web from "../assets/svgs/web.svg"; 
+import rotate3d from "../assets/svgs/rotate-3d.svg"; 
 import relation from "../assets/images/relation.png"
 import about from "../assets/images/about.png"
 
@@ -45,13 +47,24 @@ import mangas from "../data/mangas"
       </div>
     </section>
 
-    <section id="about">
-      <div class="grid grid-cols-3">
-        <div></div>
+    <section id="about" class="mt-10">
+      <div class="grid grid-cols-3 w-8/12 mx-auto mb-10">
         <div>
-          <h2 class="text-am-red">¿Por qué AnbuManga?</h2>
+          <Card title="Recomendaciones Personalizadas">
+            <p class="pb-20">Descubre nuevas obras basadas en tus gustos y patrones de compra.</p>
+          </Card>
         </div>
-        <div></div>
+        <div>
+          <h2 class="text-am-red text-center mb-10">¿Por qué AnbuManga?</h2>
+          <Card title="Realidad Aumentada">
+            <Image class="h-28 w-auto mx-auto pb-10" src={rotate3d} alt="Imagen de rotacion 3d." />
+          </Card>
+        </div>
+        <div>
+          <Card title="Comunidad en Línea">
+            <p class="pb-20">Conéctate con otros aficionados al manga y comparte tus experiencias.</p>
+          </Card>
+        </div>
       </div>
       <Image class="mx-auto w-9/12 lg:w-1/2 h-auto pr-2" src={about} alt="Imagen de seccion hacerca de Anbu Manga." />
     </section>
