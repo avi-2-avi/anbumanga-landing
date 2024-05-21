@@ -9,24 +9,24 @@ import logo from "../assets/svgs/logo.svg";
 
 <Layout title="Anbu Manga | Venta de Mangas en el Perú">
 	<main>
-    <section id="hero" class="bg-manga-pattern py-40">
-      <div class="grid grid-cols-2 w-10/12 mx-auto text-white">
-        <div class="mr-12">
+    <section id="hero" class="bg-manga-pattern py-4 md:py-20 lg:py-40">
+      <div class="grid lg:grid-cols-2 w-10/12 mx-auto text-white text-center lg:text-left">
+        <div class="lg:mr-12 my-4 lg:my-0 ">
           <div class="flex flex-row items-center mb-2">
             <Image class="w-8 pr-2" src={logo} alt="Anbu Manga logo." />
             <p class="text-sm font-bold">Anbu Manga</p>
           </div>
-          <h1>Explora la web donde tu destino manga te espera</h1>
+          <h1 class="text-4xl lg:text-5xl">Explora la web donde tu destino manga te espera</h1>
           <p class="mt-2 font-bold text-lg">Compra calidad, compra en Anbu Manga</p>
           <p class="mt-8">Regístrate Ahora y Obtén un 10% de Descuento</p>
-          <div class="flex flex-row mt-4">
+          <div class="flex flex-col md:flex-row mt-4 items-center md:items-start justify-center lg:justify-start">
             <Input placeholder="Escribe tu email"/>
-            <div class="mr-4"></div>
+            <div class="mt-4 md:mr-4 md:mt-0"></div>
             <Button text="Enviar" />
           </div>
         </div>
-        <div class="ml-12 text-center">
-          <div class="bg-am-gray h-72 mb-4">
+        <div class="lg:ml-12 text-center mt-8 lg:mt-0">
+          <div class="bg-am-gray min-h-48 md:min-h-80 mb-4">
             VIDEO
           </div>
           <Button text="Comprar ahora"/>
@@ -38,9 +38,8 @@ import logo from "../assets/svgs/logo.svg";
 
 <style>
 	h1 {
-		font-size: 48px;
+		line-height: 1.6;
 		font-weight: 500;
-		text-align: left;
 	}
 	h2 {
 		font-size: 1.4rem;
