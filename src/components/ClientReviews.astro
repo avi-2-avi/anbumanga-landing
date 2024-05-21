@@ -4,23 +4,61 @@ import client1 from "../assets/images/client1.png";
 import client2 from "../assets/images/client2.png"; 
 import client3 from "../assets/images/client3.png"; 
 
+const clients = [
+  {
+    src: client1,
+    alt: "Client 1 - Juanito.",
+    name: "Juanito Perez",
+    quote: "Me encanta cómo AnbuManga recomienda nuevos mangas basados en mis gustos y preferencias. ¡Siempre descubro algo nuevo!"
+  },
+  {
+    src: client2,
+    alt: "Cliente 2 - Maria.",
+    name: "Maria Garcia",
+    quote: "AnbuManga es mi tienda favorita para descubrir nuevas historias y personajes. ¡Es genial que siempre tengan lo más actual para leer!"
+  },
+  {
+    src: client3,
+    alt: "Cliente 3 - Pedro.",
+    name: "Pedro Martinez",
+    quote: "Los recomendaciones de AnbuManga siempre están en punto. He descubierto tantos mangas increíbles gracias a ellos."
+  }
+];
 ---
 
-<div class="slideshow-container">
+<div class="slideshow-container w-[70%] sm:w-[65%] md:w-[60%] lg:w-[50%] xl:w-[40%] 2xl:w-[32%]">
   <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <Image class="w-40 pr-2" src={client1} alt="Anbu Manga logo." />
-      <div class="text">Caption Text</div>
+    <div class="bg-am-red rounded-2xl py-12 px-14 grid grid-cols-1 lg:grid-cols-2">
+      <div class="flex items-center">
+        <Image class="w-40 pr-2 mx-auto lg:mx-0 mb-4 lg:mb-0" src={clients[0].src} alt={clients[0].alt} />
+      </div>
+      <div class="text-white text-center">
+        <p class="mb-4 text-2xl">{clients[0].name}</p>
+        <p class="">{clients[0].quote}</p>
+      </div>
+    </div>
   </div>
   <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <Image class="w-40 pr-2" src={client2} alt="Anbu Manga logo." />
-      <div class="text">Caption Two</div>
+    <div class="bg-am-red rounded-2xl py-12 px-14 grid grid-cols-1 lg:grid-cols-2">
+      <div class="flex items-center">
+        <Image class="w-40 pr-2 mx-auto lg:mx-0 mb-4 lg:mb-0" src={clients[1].src} alt={clients[1].alt} />
+      </div>
+      <div class="text-white text-center">
+        <p class="mb-4 text-2xl">{clients[1].name}</p>
+        <p class="">{clients[1].quote}</p>
+      </div>
+    </div>
   </div>
   <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <Image class="w-40 pr-2" src={client3} alt="Anbu Manga logo." />
-      <div class="text">Caption Three</div>
+    <div class="bg-am-red rounded-2xl py-12 px-14 grid grid-cols-1 lg:grid-cols-2">
+      <div class="flex items-center">
+        <Image class="w-40 pr-2 mx-auto lg:mx-0 mb-4 lg:mb-0" src={clients[2].src} alt={clients[2].alt} />
+      </div>
+      <div class="text-white text-center">
+        <p class="mb-4 text-2xl">{clients[2].name}</p>
+        <p class="">{clients[2].quote}</p>
+      </div>
+    </div>
   </div>
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -47,7 +85,6 @@ img {
 }
 /* Slideshow container */
 .slideshow-container {
-  max-width: 80%;
   position: relative;
   margin: auto;
 }
@@ -59,7 +96,7 @@ img {
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: #9A1C1F;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -68,12 +105,11 @@ img {
 }
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: -3rem;
   border-radius: 3px 0 0 3px;
 }
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev {
+  left: -3rem;
 }
 /* Caption text */
 .text {
@@ -84,14 +120,6 @@ img {
   bottom: 8px;
   width: 100%;
   text-align: center;
-}
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 /* The dots/bullets/indicators */
 .dot {
