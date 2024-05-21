@@ -24,7 +24,7 @@ import web from "../assets/svgs/web.svg";
           <h1 class="text-4xl lg:text-5xl">Explora la web donde tu destino manga te espera</h1>
           <p class="mt-2 font-bold text-lg">Compra calidad, compra en Anbu Manga</p>
           <p class="mt-8">Regístrate Ahora y Obtén un 10% de Descuento</p>
-          <div class="flex flex-col md:flex-row mt-4 items-center md:items-start justify-center lg:justify-start">
+          <div class="flex text-center md:text-start flex-col md:flex-row mt-4 items-center md:items-start justify-center lg:justify-start">
             <Input placeholder="Escribe tu email"/>
             <div class="mt-4 md:mr-4 md:mt-0"></div>
             <Button text="Enviar" />
@@ -40,10 +40,10 @@ import web from "../assets/svgs/web.svg";
     </section>
     <section id="contact">
       <div class="bg-am-red">
-        <div class="bg-white w-1/2 text-am-red mx-auto py-14 text-center px-20">
+        <div class="bg-white w-full md:w-1/2 text-am-red mx-auto py-14 text-center px-4 md:px-10 lg:px-20">
           <h2>Compra Fácil y Rápido</h2>
           <p class="text-lg w-10/12 mx-auto mt-8">Usa nuestras redes sociales y página web para explorar y adquirir productos. Disfruta de recomendaciones personalizadas y experiencias de realidad aumentada</p>
-          <div class="flex space-x-6 w-4/5 mx-auto justify-between mt-8">
+          <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-4 lg:w-4/5 lg:mx-auto items-center lg:justify-between mt-8">
             <a href="#">
               <Image class="w-12" src={whatsapp} alt="Ir a WhatsApp." />
             </a>
@@ -63,9 +63,9 @@ import web from "../assets/svgs/web.svg";
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 my-20 w-10/12 mx-auto">
-        <div class="mr-10 flex justify-center">
-          <div class="w-10/12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 my-10 md:my-20 w-10/12 mx-auto">
+        <div class="lg:mr-10 flex justify-center">
+          <div class="w-10/12 text-center lg:text-start">
             <h2 class="text-am-red">¡No Esperes Más!</h2>
             <p class="mt-2">Únete a AnbuManga Hoy</p>
             <div class="flex flex-col md:flex-row mt-4 items-center md:items-start justify-center lg:justify-start">
@@ -76,7 +76,7 @@ import web from "../assets/svgs/web.svg";
           </div>
         </div>
 
-        <div class="ml-10 flex justify-center">
+        <div class="mt-10 lg:mt-0 lg:ml-10 flex justify-center">
           <div class="border-am-red border-[3px] rounded-2xl p-8 w-3/5">
             <p class="text-am-red text-center">Regístrate ahora y disfruta de un 10% de descuento en tu primera compra. ¡Descubre, colecciona y comparte tus mangas favoritos con AnbuManga!</p>
           </div>
