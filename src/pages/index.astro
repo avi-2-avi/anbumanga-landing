@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 
 import logo from "../assets/svgs/logo.svg"; 
-import whatsapp from "../assets/svgs/whatsapp.svg"; 
+import tiktok from "../assets/svgs/tiktok.svg"; 
 import facebook from "../assets/svgs/facebook.svg"; 
 import instagram from "../assets/svgs/instagram.svg"; 
 import email from "../assets/svgs/email.svg"; 
@@ -43,7 +43,7 @@ import mangas from "../data/mangas"
           <div class="bg-am-gray min-h-48 md:min-h-80 mb-4">
             VIDEO
           </div>
-          <Button text="Comprar ahora"/>
+          <Button isCallToAction text="Comprar ahora"/>
         </div>
       </div>
     </section>
@@ -65,7 +65,7 @@ import mangas from "../data/mangas"
             <p class="text-xl mb-4">Descubre y compra mangas de importación directa</p>
             <p>Explora nuestra selección exclusiva de manga importado directamente desde Japón. Encuentra los últimos lanzamientos y tus títulos favoritos con la calidad y autenticidad que mereces</p>
           </div>
-          <Button text="Comprar ahora"/>
+          <Button isCallToAction text="Comprar ahora"/>
         </div>
       </div>
 
@@ -128,7 +128,7 @@ import mangas from "../data/mangas"
             <p class="text-am-red text-center text-xl">¿Deseas adquirir alguno de estos mangas? </p>
             <p class="text-am-red text-center text-xl">No lo dudes y consigue el tuyo también </p>
           </div>
-          <Button text="Comprar ahora"/>
+          <Button isCallToAction text="Comprar ahora"/>
         </div>
       </div>
     </section>
@@ -144,20 +144,20 @@ import mangas from "../data/mangas"
           <h2>Compra Fácil y Rápido</h2>
           <p class="text-lg w-10/12 mx-auto mt-8">Usa nuestras redes sociales y página web para explorar y adquirir productos. Disfruta de recomendaciones personalizadas y experiencias de realidad aumentada</p>
           <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-4 lg:w-4/5 lg:mx-auto items-center lg:justify-between mt-8">
-            <a href="#">
-              <Image class="w-12" src={whatsapp} alt="Ir a WhatsApp." />
+            <a href="https://www.tiktok.com/@anbu_manga?_t=8mXnBZ7iuc1&_r=1">
+              <Image class="w-12 icon" src={tiktok} alt="Ir a TikTok." />
+            </a>
+            <a href="https://www.facebook.com/share/LjVhoyQz7fS7EC36/?mibextid=qi2Omg">
+              <Image class="w-12 icon" src={facebook} alt="Ir a Facebook." />
+            </a>
+            <a href="https://www.instagram.com/anbu.manga?igsh=Yzljdm9oamcwampt">
+              <Image class="w-12 icon" src={instagram} alt="Ir a Instagram." />
+            </a>
+            <a href="mailto:anbumanga.store@gmail.com">
+              <Image class="w-12 icon" src={email} alt="Ir a Correo." />
             </a>
             <a href="#">
-              <Image class="w-12" src={facebook} alt="Ir a Facebook." />
-            </a>
-            <a href="#">
-              <Image class="w-12" src={instagram} alt="Ir a Instagram." />
-            </a>
-            <a href="#">
-              <Image class="w-12" src={email} alt="Ir a Correo." />
-            </a>
-            <a href="#">
-              <Image class="w-12" src={web} alt="Ir a Website." />
+              <Image class="w-12 icon" src={web} alt="Ir a Website." />
             </a>
           </div>
         </div>
@@ -198,4 +198,16 @@ import mangas from "../data/mangas"
 		font-weight: 500;
 		line-height: 1.6;
 	}
+  @keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.icon:hover {
+  animation: bounce 0.5s ease-in-out infinite;
+}
 </style>

@@ -1,7 +1,16 @@
 
 ---
 // TS
-const { text} = Astro.props;
+const { text, isCallToAction = false } = Astro.props;
+const buttonClass = isCallToAction ? 'cta-button' : '';
 
 ---
-<button class="text-white bg-am-red px-4 py-2 min-w-32 max-w-44 rounded-xl h-10 hover:opacity-95">{text}</button>
+<button class={`text-white bg-am-red px-4 py-2 min-w-32 max-w-44 rounded-xl h-10 hover:opacity-95 ${buttonClass}`}>{text}</button>
+
+<style>
+.cta-button:hover {
+  transform: scale(1.10);
+  transition: transform 0.2s ease-in-out;
+}
+</style>
+
