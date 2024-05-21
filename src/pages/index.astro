@@ -48,14 +48,15 @@ import mangas from "../data/mangas"
     </section>
 
     <section id="about" class="mt-10">
-      <div class="grid grid-cols-3 w-8/12 mx-auto mb-10">
+      <div class="grid grid-cols-1 xl:grid-cols-3 w-10/12 md:w-8/12 mx-auto mb-10 gap-y-8">
+        <h2 class="flex xl:hidden text-am-red text-center mx-auto">¿Por qué Anbu Manga?</h2>
         <div>
           <Card title="Recomendaciones Personalizadas">
             <p class="pb-20">Descubre nuevas obras basadas en tus gustos y patrones de compra.</p>
           </Card>
         </div>
         <div>
-          <h2 class="text-am-red text-center mb-10">¿Por qué AnbuManga?</h2>
+          <h2 class="hidden xl:flex text-am-red text-center mb-10">¿Por qué Anbu Manga?</h2>
           <Card title="Realidad Aumentada">
             <Image class="h-28 w-auto mx-auto pb-10" src={rotate3d} alt="Imagen de rotacion 3d." />
           </Card>
