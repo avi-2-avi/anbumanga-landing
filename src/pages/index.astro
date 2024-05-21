@@ -5,6 +5,11 @@ import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 
 import logo from "../assets/svgs/logo.svg"; 
+import whatsapp from "../assets/svgs/whatsapp.svg"; 
+import facebook from "../assets/svgs/facebook.svg"; 
+import instagram from "../assets/svgs/instagram.svg"; 
+import email from "../assets/svgs/email.svg"; 
+import web from "../assets/svgs/web.svg"; 
 ---
 
 <Layout title="Anbu Manga | Venta de Mangas en el Perú">
@@ -33,6 +38,32 @@ import logo from "../assets/svgs/logo.svg";
         </div>
       </div>
     </section>
+    <section id="contact">
+      <div class="bg-am-red">
+        <div class="bg-white w-1/2 text-am-red mx-auto py-14 text-center px-20">
+          <h2>Compra Fácil y Rápido</h2>
+          <p class="text-lg w-10/12 mx-auto mt-8">Usa nuestras redes sociales y página web para explorar y adquirir productos. Disfruta de recomendaciones personalizadas y experiencias de realidad aumentada</p>
+          <div class="flex space-x-6 w-4/5 mx-auto justify-between mt-8">
+            <a href="#">
+              <Image class="w-12" src={whatsapp} alt="Ir a WhatsApp." />
+            </a>
+            <a href="#">
+              <Image class="w-12" src={facebook} alt="Ir a Facebook." />
+            </a>
+            <a href="#">
+              <Image class="w-12" src={instagram} alt="Ir a Instagram." />
+            </a>
+            <a href="#">
+              <Image class="w-12" src={email} alt="Ir a Correo." />
+            </a>
+            <a href="#">
+              <Image class="w-12" src={web} alt="Ir a Website." />
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
 	</main>
 </Layout>
 
@@ -42,9 +73,9 @@ import logo from "../assets/svgs/logo.svg";
 		font-weight: 500;
 	}
 	h2 {
-		font-size: 1.4rem;
+		font-size: 40px;
 		font-weight: 500;
 		line-height: 1.6;
-		text-align: center;
+    color: "#9A1C1F";
 	}
 </style>
