@@ -9,7 +9,7 @@ export default {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        "manga-pattern": "url('./src/assets/images/manga-pattern.png')",
+        "manga-pattern": "url('/src/assets/images/manga-pattern.png')",
       },
       screens: {
         sm: "640px",
