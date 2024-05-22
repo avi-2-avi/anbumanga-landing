@@ -19,6 +19,8 @@ import discover from "../assets/images/discover.png"
 import about from "../assets/images/about.png"
 
 import mangas from "../data/mangas"
+
+import video from "../assets/videos/hero-video.mp4"
 ---
 
 <Layout title="Anbu Manga | Venta de Mangas en el Perú">
@@ -40,8 +42,11 @@ import mangas from "../data/mangas"
           </div>
         </div>
         <div class="lg:ml-12 text-center mt-8 lg:mt-0">
-          <div class="bg-am-gray min-h-48 md:min-h-80 mb-4">
-            VIDEO
+          <div class="flex items-center min-h-48 md:min-h-80 mb-4">
+            <video controls >
+              <source src={video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <Button isCallToAction text="Comprar ahora"/>
         </div>
