@@ -99,7 +99,7 @@ import video from "../assets/videos/hero-video.mp4"
       <div class="grid grid-cols-1 gap-y-8 xl:grid-cols-7 text-am-red place-items-center xl:w-3/5 mx-4 xl:mx-auto">
         <Image class="hidden xl:flex h-80 w-auto pr-2 xl:col-start-1 xl:col-end-4" src={relation} alt="Imagen de seccion de relacion." />
         <div class="place-self-center mx-auto xl:mb-16 xl:col-start-4 xl:col-end-6">
-          <FoldableElement client:only="react" title="Atención Personalizada" content="Cada cliente recibe un servicio adaptado a sus necesidades específicas."  />
+          <FoldableElement client:visible client:only="react" title="Atención Personalizada" content="Cada cliente recibe un servicio adaptado a sus necesidades específicas."  />
         </div>
         <div class="place-self-center mx-auto xl:mt-16 xl:col-start-6 xl:col-end-8">
           <FoldableElement client:only="react" title="Seguimiento Post-venta" content="Aseguramos tu satisfacción y escuchamos tus sugerencias."  />
