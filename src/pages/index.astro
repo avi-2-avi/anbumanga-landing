@@ -14,9 +14,9 @@ import instagram from "../assets/svgs/instagram.svg";
 import email from "../assets/svgs/email.svg"; 
 import web from "../assets/svgs/web.svg"; 
 import rotate3d from "../assets/svgs/rotate-3d.svg"; 
-import relation from "../assets/images/relation.png"
-import discover from "../assets/images/discover.png"
-import about from "../assets/images/about.png"
+import relation from "../assets/images/relation.webp"
+import discover from "../assets/images/discover.webp"
+import about from "../assets/images/about.webp"
 
 import mangas from "../data/mangas"
 
@@ -25,30 +25,28 @@ import video from "../assets/videos/hero-video.mp4"
 
 <Layout title="Anbu Manga | Venta de Mangas en el Perú">
 	<main>
-    <section id="hero" class="bg-manga-pattern bg-no-repeat bg-cover w-full h-auto py-12 md:py-20 lg:py-40 xl:py-60">
-      <div class="grid lg:grid-cols-2 w-10/12 mx-auto text-white text-center lg:text-left">
-        <div class="lg:mr-12 mb-4 lg:mb-0">
+    <section id="hero" class="bg-manga-pattern bg-no-repeat bg-cover w-full h-auto py-12 md:py-14 lg:py-16 xl:py-28 3xl:py-44">
+      <div class="grid xl:grid-cols-2 w-10/12 mx-auto text-white text-center xl:text-left">
+        <div class="xl:mr-12 mb-4 lg:mb-0">
           <div class="flex flex-row items-center mb-2">
-            <Image class="w-8 pr-2" src={logo} alt="Anbu Manga logo." />
-            <p class="text-sm font-bold">Anbu Manga</p>
+            <Image class="w-16 pr-4" src={logo} alt="Anbu Manga logo." />
+            <p class="text-3xl font-bold">Anbu Manga</p>
           </div>
-          <h1 class="text-4xl lg:text-5xl">Explora la web donde tu destino manga te espera</h1>
-          <p class="mt-2 font-bold text-lg">Compra calidad, compra en Anbu Manga</p>
-          <p class="mt-8">Regístrate Ahora y Obtén un 10% de Descuento</p>
-          <div class="flex text-center md:text-start flex-col md:flex-row mt-4 items-center md:items-start justify-center lg:justify-start">
+          <h1 class="text-5xl xl:text-6xl">Explora la web donde tu destino manga te espera</h1>
+          <p class="mt-8 text-lg font-bold">Deja tu Correo y Obtén en tu Primera Compra un 50% de Descuento</p>
+          <div class="flex text-center md:text-start flex-col md:flex-row mt-4 items-center md:items-start justify-center xl:justify-start">
             <Input placeholder="Escribe tu email"/>
             <div class="mt-4 md:mr-4 md:mt-0"></div>
-            <Button text="Enviar" />
+            <Button text="Visitar la Tienda" />
           </div>
         </div>
-        <div class="lg:ml-12 text-center mt-8 lg:mt-0">
-          <div class="flex items-center min-h-48 md:min-h-80 mb-4">
+        <div class="flex items-center justify-center xl:ml-12 mt-8 xl:mt-0">
+          <div class="flex items-center min-h-48 md:min-h-80 mb-4 max-w-3xl">
             <video controls >
               <source src={video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
-          <Button isCallToAction text="Comprar ahora"/>
         </div>
       </div>
     </section>
@@ -70,7 +68,7 @@ import video from "../assets/videos/hero-video.mp4"
             <p class="text-xl mb-4">Descubre y compra mangas de importación directa</p>
             <p>Explora nuestra selección exclusiva de manga importado directamente desde Japón. Encuentra los últimos lanzamientos y tus títulos favoritos con la calidad y autenticidad que mereces</p>
           </div>
-          <Button isCallToAction text="Comprar ahora"/>
+          <Button isCallToAction text="Visita la Tienda"/>
         </div>
       </div>
 
@@ -133,7 +131,7 @@ import video from "../assets/videos/hero-video.mp4"
             <p class="text-am-red text-center text-xl">¿Deseas adquirir alguno de estos mangas? </p>
             <p class="text-am-red text-center text-xl">No lo dudes y consigue el tuyo también </p>
           </div>
-          <Button isCallToAction text="Comprar ahora"/>
+          <Button isCallToAction text="Visita la Tienda"/>
         </div>
       </div>
     </section>
@@ -168,15 +166,15 @@ import video from "../assets/videos/hero-video.mp4"
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 my-10 md:my-20 w-10/12 mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 my-10 md:my-20 w-11/12 mx-auto">
         <div class="lg:mr-10 flex justify-center">
           <div class="w-10/12 text-center lg:text-start">
             <h2 class="text-am-red">¡No Esperes Más!</h2>
-            <p class="mt-2">Únete a AnbuManga Hoy</p>
+            <p class="mt-8 font-bold">Deja tu Correo y Obtén en tu Primera Compra un 50% de Descuento</p>
             <div class="flex flex-col md:flex-row mt-4 items-center md:items-start justify-center lg:justify-start">
               <Input placeholder="Escribe tu email"/>
               <div class="mt-4 md:mr-4 md:mt-0"></div>
-              <Button text="Enviar" />
+              <Button text="Visitar la Tienda" />
             </div>
           </div>
         </div>

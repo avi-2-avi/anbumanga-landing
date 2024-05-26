@@ -1,6 +1,6 @@
-import manga1 from "../assets/images/manga1.png";
-import manga2 from "../assets/images/manga2.png";
-import manga3 from "../assets/images/manga3.png";
+import manga1 from "../assets/images/manga1.webp";
+import manga2 from "../assets/images/manga2.webp";
+import manga3 from "../assets/images/manga3.webp";
 
 interface Manga {
   title: string;
