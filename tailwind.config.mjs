@@ -10,6 +10,8 @@ export default {
       },
       backgroundImage: {
         "manga-pattern": "url('/src/assets/images/manga-pattern.webp')",
+        "manga-small-pattern":
+          "url('/src/assets/images/manga-small-pattern.webp')",
       },
       screens: {
         sm: "640px",
