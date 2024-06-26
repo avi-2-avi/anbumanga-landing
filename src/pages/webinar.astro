@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import Input from '../components/Input.astro';
+import Button from '../components/Button.astro';
+import logo from "../assets/svgs/logo.svg"; 
+import video from "../assets/videos/webinar.mp4";
+---
+
+<Layout title="AnbuMangaStore | Venta de Mangas en el Perú">
+  <main>
+    <section id="hero" class="bg-manga-small-pattern xl:bg-manga-pattern bg-no-repeat bg-cover w-full h-screen py-12 md:py-14 lg:py-16 xl:py-20">
+      <h1 class="text-center w-1/2 mx-auto mb-12 text-white text-4xl md:text-5xl lg:text-[3.2rem] xl:text-6xl">Webinar AnbuManga: Desde la Creación hasta la Colección Exclusiva</h1>
+      <div class="grid xl:grid-cols-2 w-10/12 mx-20 justify-items-center text-white text-center xl:text-left">
+        <div class="h-full">
+          <div class="flex flex-row items-center mb-2">
+            <Image class="w-16 pr-4" src={logo} alt="AnbuMangaStore logo." />
+            <p class="text-2xl sm:text-3xl font-bold">AnbuMangaStore</p>
+          </div>
+          <p class="mt-8 text-lg font-bold">Regístrate a nuestro webinar EXCLUSIVO</p>
+          <div class="flex text-center md:text-start flex-col space-y-4 mt-4 items-center md:items-start justify-center xl:justify-start">
+            <Input placeholder="Escribe tu nombre"/>
+            <Input placeholder="Escribe tu email"/>
+            <Button text="Registrarse" />
+          </div>
+          <p class="mt-8 text-2xl font-bold text-center">28 de Junio, 2024 | Hora: 19:00</p>
+          <div id="countdown" class="bg-am-red p-4 rounded-xl text-2xl text-center w-44 mx-auto my-4"></div>
+        </div>
+        <div class="flex items-center justify-center xl:ml-12 mt-8 xl:mt-0">
+          <div class="flex items-center min-h-48 md:min-h-80 mb-4 max-w-3xl">
+            <video controls>
+              <source src={video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center">
+        <button class="text-white bg-am-red p-4 min-w-40 rounded-xl mt-6 hover:opacity-95 text-2xl">UNETE AL GRUPO DE WHATSAPP</button>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script lang="javascript">
+  let countdown = {
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  };
+
+  function updateCountdown() {
+    const targetDate = new Date("June 28, 2024 19:00:00 GMT-0500");
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference > 0) {
+      countdown.days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      countdown.hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      countdown.minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      countdown.seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    } else {
+      clearInterval(interval);
+    }
+
+    const countdownElement = document.getElementById('countdown');
+    countdownElement.textContent = `${countdown.days}:${countdown.hours}:${countdown.minutes}:${countdown.seconds}`;
+  }
+
+  updateCountdown();
+  const interval = setInterval(updateCountdown, 1000);
+</script>
